@@ -53,9 +53,22 @@ const Forms2 = () => {
                 </div>
 
                 <div>
-                    <p>First Name:</p>
-                    <input type="text" value={formData.fname} name="fname" onChange={handleFormChange} />
+                    <p>Gender:</p>
+                    Male <input type="radio" value="male" name="gender" onChange={handleFormChange} />
+                    Female <input type="radio" value="female" name="gender" onChange={handleFormChange} />
                 </div>
+
+                <div>
+                    <p>Password:</p>
+                    <input type="password" value={formData.password} name="password" onChange={handleFormChange} />
+                </div>
+
+                <div>
+                    <p>Agree to our Terms?:</p>
+                    <input type="checkbox" checked={formData.agreement} name="agreement" onChange={handleFormChange} />
+                </div>
+
+                
             </div>
         </div>
     )
