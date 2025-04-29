@@ -7,7 +7,9 @@ import './App.css'
 // import ListComponent from './components/ListComponent'
 // import CounterApp from './components/CounterApp'
 import CounterWithReducer from './components/CounterWithReducer'
-import Forms2 from './components/Forms2'
+// import Forms2 from './components/Forms2'
+// import CounterRP from './components/CounterRP'
+// import CounterClickRP from "./components/CounterClickRP"
 
 function App() {
   return (
@@ -28,7 +30,9 @@ function App() {
 
       {/* <CounterApp /> */}
 
-      <Forms2 />
+      {/* <Forms2 /> */}
+
+      {/* <CounterRP render={(counter, handleIncrement) => <CounterClickRP counter={counter} handleIncrement={handleIncrement} />} /> */}
 
       {/* <CounterWithReducer /> */}
 
