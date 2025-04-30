@@ -6,13 +6,16 @@ import './App.css'
 // import LogOutLogin from './components/LogOutLogin'
 // import ListComponent from './components/ListComponent'
 // import CounterApp from './components/CounterApp'
-import CounterWithReducer from './components/CounterWithReducer'
+// import CounterWithReducer from './components/CounterWithReducer'
 // import Forms2 from './components/Forms2'
 // import CounterRP from './components/CounterRP'
 // import CounterClickRP from "./components/CounterClickRP"
-import CourseContext from './components/contexts/courseContext'
-import ComponentOne from "./components/ComponentOne"
-import ComponentThree from './components/ComponentThree'
+// import CourseContext from './components/contexts/courseContext'
+// import ComponentOne from "./components/ComponentOne"
+// import ComponentThree from './components/ComponentThree'
+// import UseEffectLesson from './components/useEffectLesson'
+// import Timer from './components/Timer'
+import Posts from './components/Posts'
 
 function App() {
   return (
@@ -39,11 +42,16 @@ function App() {
 
       {/* <CounterWithReducer /> */}
 
-      <CourseContext.Provider value={{ course : 'React'}}>
+      {/* <CourseContext.Provider value={{ course : 'React'}}>
         <ComponentOne />
-      </CourseContext.Provider>
+      </CourseContext.Provider> */}
 
       {/* <withInstitution /> */}
+
+      {/* <UseEffectLesson /> */}
+      {/* <Timer /> */}
+
+      <Posts />
     </div>
   )
 }
