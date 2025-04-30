@@ -10,6 +10,9 @@ import CounterWithReducer from './components/CounterWithReducer'
 // import Forms2 from './components/Forms2'
 // import CounterRP from './components/CounterRP'
 // import CounterClickRP from "./components/CounterClickRP"
+import CourseContext from './components/contexts/courseContext'
+import ComponentOne from "./components/ComponentOne"
+import ComponentThree from './components/ComponentThree'
 
 function App() {
   return (
@@ -35,6 +38,10 @@ function App() {
       {/* <CounterRP render={(counter, handleIncrement) => <CounterClickRP counter={counter} handleIncrement={handleIncrement} />} /> */}
 
       {/* <CounterWithReducer /> */}
+
+      <CourseContext.Provider value={{ course : 'React'}}>
+        <ComponentOne />
+      </CourseContext.Provider>
 
       {/* <withInstitution /> */}
     </div>
