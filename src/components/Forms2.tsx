@@ -22,7 +22,7 @@ const Forms2 = () => {
 
     const handleFormChange = (event : ChangeEvent<HTMLInputElement>) => {
 
-        console.log(formData);
+        // console.log(formData);
 
         if(event.target.type == 'checkbox'){
             setFormData((oldData) => ({...oldData, [event.target.name] : event.target.checked }))

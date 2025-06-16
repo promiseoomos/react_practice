@@ -15,7 +15,9 @@ import './App.css'
 // import ComponentThree from './components/ComponentThree'
 // import UseEffectLesson from './components/useEffectLesson'
 // import Timer from './components/Timer'
-import Posts from './components/Posts'
+// import Posts from './components/Posts'
+// import UseCallBack from './components/UseCallBack'
+import PostsListWOReducer from './components/PostsListWOReducer'
 
 function App() {
   return (
@@ -51,7 +53,11 @@ function App() {
       {/* <UseEffectLesson /> */}
       {/* <Timer /> */}
 
-      <Posts />
+      {/* <Posts /> */}
+
+      {/* <UseCallBack /> */}
+
+      <PostsListWOReducer />
     </div>
   )
 }
