@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 
 export interface Post {
@@ -21,9 +22,14 @@ const Posts = () => {
         fetchPosts();
     }, [])
 
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const searchString = searchParams.get("search");
+
+
     return (
         <div>
-            <p>All Posts</p>
+            <p>{ searchString == 'Latest' ? 'Latest Posts' : 'All Posts' }</p>
 
             {
                 posts.map((post : Post)  => (
@@ -34,6 +40,9 @@ const Posts = () => {
                     </div>
                 ))
             }
+
+            <button onClick={() => setSearchParams({search: 'Latest', page : "1"})}>Latest Posts</button>
+            <button onClick={() => setSearchParams({})}>Reset</button>
         </div>
     )
 }

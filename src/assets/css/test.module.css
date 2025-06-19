@@ -1,0 +1,37 @@
+.container{
+    color: yellow;
+    background-color: red;
+    border: 2px solid red;
+    width: 100%
+}
+
+.text {
+    font-size: 18px;
+    color: red;
+    background-color: yellow
+}
+
+.container1{
+    color: red;
+    background-color: red;
+    border: 2px solid yellow;
+    width: 100%
+}
+
+.text1 {
+    font-size: 18px;
+    color: yellow;
+    background-color: red
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    background-color: #30876710
+}
+
+nav a.active {
+    font-weight: bold;
+    color: green;
+    font-size: 28px;
+}

@@ -1,6 +1,9 @@
 // import { useState } from 'react'
 // import SubComponent from './components/SubComponent'
+
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
+// import CSSStyle from './components/CSSStyle'
 // import ClassBasedComponent from './components/ClassBasedComponents'
 // import FunctionalComponent from './components/FunctionalComponent'
 // import LogOutLogin from './components/LogOutLogin'
@@ -17,12 +20,20 @@ import './App.css'
 // import Timer from './components/Timer'
 // import Posts from './components/Posts'
 // import UseCallBack from './components/UseCallBack'
-import PostsListWOReducer from './components/PostsListWOReducer'
+// import PostsListWOReducer from './components/PostsListWOReducer'
+import AboutPage from './pages/AboutPage'
+import HomePage from './pages/HomePage'
+import ContactPage from './pages/ContactPage'
+import Navbar from './components/NavBar'
+import OrderConfirmation from './components/OrderConfirmation'
+import NotFound from './pages/NotFound'
+import Posts from './components/Posts'
+import PostDetail from './pages/PostDetail'
 
 function App() {
   return (
     <div className='w-full'>
-      <p>The Root Component</p>
+      {/* <p>The Root Component</p> */}
       {/* <SubComponent text="texts">
         <div>
           Here we go
@@ -57,7 +68,19 @@ function App() {
 
       {/* <UseCallBack /> */}
 
-      <PostsListWOReducer />
+      {/* <PostsListWOReducer /> */}
+
+      {/* <CSSStyle /> */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="about" element={<AboutPage />}></Route>
+        <Route path="contact" element={<ContactPage />}></Route>
+        <Route path="order-confirmation" element={<OrderConfirmation />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="posts" element={<Posts />} />
+        <Route path="posts/:postId" element={<PostDetail />} />
+      </Routes>
     </div>
   )
 }
