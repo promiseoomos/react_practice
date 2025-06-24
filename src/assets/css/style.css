@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    gap: 20px;
+    background-color: #30876710
+}
+
+nav a.active {
+    font-weight: bold;
+    color: green;
+    font-size: 18px;
+}

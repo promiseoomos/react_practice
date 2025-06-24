@@ -29,6 +29,7 @@ import OrderConfirmation from './components/OrderConfirmation'
 import NotFound from './pages/NotFound'
 import Posts from './components/Posts'
 import PostDetail from './pages/PostDetail'
+import PostHome from './pages/PostHome'
 
 function App() {
   return (
@@ -78,8 +79,11 @@ function App() {
         <Route path="contact" element={<ContactPage />}></Route>
         <Route path="order-confirmation" element={<OrderConfirmation />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="posts" element={<Posts />} />
-        <Route path="posts/:postId" element={<PostDetail />} />
+        <Route path='posts' element={<PostHome />}>
+          <Route index element={<Posts />} />
+          <Route path="posts/:postId" element={<PostDetail />} />
+        </Route>
+        
       </Routes>
     </div>
   )
